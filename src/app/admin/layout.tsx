@@ -1,5 +1,8 @@
 import { Nav, NavLink } from "@/components/Nav"
 
+// THIS CODE BELOW FORCES NEXTJS TO NOT CACHE ANY OF OUR ADMIN PAGES
+export const dynamic = 'force-dynamic'
+
 export default function AdminLayout({
     children, 
 }: Readonly<{

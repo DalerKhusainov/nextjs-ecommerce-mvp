@@ -16,6 +16,8 @@ async function getSalesData() {
     _count: true,
   });
 
+  // await wait(2000)
+
   return {
     amount: (data._sum.pricePaidInCents || 0) / 100,
     numberOfSales: data._count,
@@ -56,6 +58,11 @@ async function getProductData() {
 
   return { activeCount, inactiveCount }
 }
+
+// IT WAS CRAETED FOR CHEKING IS LOADING.TSX WORKING
+// function wait(duration: number) {
+//   return new Promise(resolve => setTimeout(resolve, duration))
+// }
 
 export default async function AdminDashboard() {
   // GOOD PRACTICE //
