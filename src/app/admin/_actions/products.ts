@@ -111,9 +111,9 @@ export async function updateProduct(
     );
   }
 
-  await db.product.create({
+  await db.product.update({
+    where: { id },
     data: {
-      isAvailableForPurchase: false,
       name: data.name,
       description: data.description,
       priceInCents: data.priceInCents,
